@@ -14,7 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      张璐萍的博客 | Hexo
+      使用 hexo + github 搭建博客 | Hexo
     
   </title>
   <meta name="author" content="John Doe">
@@ -115,7 +115,7 @@
 				<!-- Page title -->
 				<p>
 					
-						当前文章&nbsp;:&nbsp;《张璐萍的博客》
+						当前文章&nbsp;:&nbsp;《使用 hexo + github 搭建博客》
 					
 				</p>
 				<!-- Progress bar -->
@@ -278,8 +278,8 @@
 	
 	<div class="article-title">
 		
-	<a href="/2019/04/23/张璐萍的博客/" itemprop="url">
-		张璐萍的博客
+	<a href="/2019/04/25/使用-hexo-github-搭建博客/" itemprop="url">
+		使用 hexo + github 搭建博客
 	</a>
 
 	</div>
@@ -288,17 +288,17 @@
 		<span>
 			
 	发布于
-	<a href="/2019/04/23/张璐萍的博客/" itemprop="url">
-		<time datetime="2019-04-23T10:32:14.000Z" itemprop="datePublished">
-	  		2019-04-23
+	<a href="/2019/04/25/使用-hexo-github-搭建博客/" itemprop="url">
+		<time datetime="2019-04-25T05:36:11.000Z" itemprop="datePublished">
+	  		2019-04-25
 	  </time>
 	</a> 
 
 	/
 	更新于
-	<a href="/2019/04/23/张璐萍的博客/" itemprop="url">
-		<time datetime="2019-04-23T10:32:14.000Z" itemprop="dateUpdated">
-	  		2019-04-23
+	<a href="/2019/04/25/使用-hexo-github-搭建博客/" itemprop="url">
+		<time datetime="2019-04-25T05:36:11.000Z" itemprop="dateUpdated">
+	  		2019-04-25
 	  </time>
 	</a> 	
 
@@ -308,8 +308,8 @@
 			<i class="fa fa-tags"></i>
 			
 	
-		<a href="/tags/test/" class=" ">
-			test
+		<a href="/tags/github/" class=" ">
+			github
 		</a>
 	
 		
@@ -317,7 +317,7 @@
 		/
 		
 
-    <span class="leancloud_visitors" id="/2019/04/23/张璐萍的博客/_visitors" data-url="/2019/04/23/张璐萍的博客/" data-title="张璐萍的博客">
+    <span class="leancloud_visitors" id="/2019/04/25/使用-hexo-github-搭建博客/_visitors" data-url="/2019/04/25/使用-hexo-github-搭建博客/" data-title="使用 hexo + github 搭建博客">
         热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
     </span>
@@ -326,7 +326,7 @@
 
 
 
-    <span class="leancloud_likes" id="/2019/04/23/张璐萍的博客/_likes" data-url="/2019/04/23/张璐萍的博客/" data-title="张璐萍的博客" rel="unlike">
+    <span class="leancloud_likes" id="/2019/04/25/使用-hexo-github-搭建博客/_likes" data-url="/2019/04/25/使用-hexo-github-搭建博客/" data-title="使用 hexo + github 搭建博客" rel="unlike">
         喜欢
         <i class="fa fa-heart"></i>
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -335,10 +335,66 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-			
+		<p>　　一般发表文章我们会选择简书、掘金、博客园等平台，但是这些平台的样式过于单一，于是我选择搭建自己的博客网站。</p>
+<h2 id="一、基于版本"><a href="#一、基于版本" class="headerlink" title="一、基于版本"></a>一、基于版本</h2><blockquote>
+<p>hexo　3.8.0<br>git　2.18.0</p>
+</blockquote>
+<h2 id="二、搭建过程"><a href="#二、搭建过程" class="headerlink" title="二、搭建过程"></a>二、搭建过程</h2><p>注：所有命令都在 git bash 运行，防止出错。(需要安装git、node)</p>
+<h3 id="2-1-关于github-https-github-com"><a href="#2-1-关于github-https-github-com" class="headerlink" title="2.1 关于github https://github.com"></a>2.1 关于github <a href="https://github.com" target="_blank" rel="noopener">https://github.com</a></h3><ol>
+<li>注册一个 github 账号(用户名将用于你的博客地址)</li>
+<li>创建仓库 仓库名为 <code>你的用户名.github.io</code></li>
+<li>创建 ssh key, 配置到 github<ul>
+<li>运行 <code>cd ~/.ssh</code>，检查本机已存在的 ssh 秘钥</li>
+<li>如果有秘钥，可以直接使用，否则需要创建新的秘钥<br><a href="https://help.github.com/en/articles/connecting-to-github-with-ssh" target="_blank" rel="noopener">https://help.github.com/en/articles/connecting-to-github-with-ssh</a></li>
+<li>运行 ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a> 测试是否成功</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-2-关于hexo-http-hexo-io"><a href="#2-2-关于hexo-http-hexo-io" class="headerlink" title="2.2 关于hexo http://hexo.io"></a>2.2 关于hexo <a href="http://hexo.io" target="_blank" rel="noopener">http://hexo.io</a></h3><ol>
+<li><code>npm install -g hexo</code> 来安装 hexo</li>
+<li>新建空文件夹，进入文件夹，运行<ul>
+<li><code>hexo init</code> (新建网站)</li>
+<li><code>hexo g</code> (生成静态文件)</li>
+<li><code>hexo s</code> (启动服务器)</li>
+</ul>
+</li>
+<li>这时 打开浏览器访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 即可</li>
+<li>上传到 github，需要修改 <code>_config.yml</code><pre class="line-numbers language-json"><code class="language-json">deploy<span class="token operator">:</span>
+type<span class="token operator">:</span> git
+repo<span class="token operator">:</span> git@github.com<span class="token operator">:</span>你的github用户名/你的github用户名.github.io.git
+branch<span class="token operator">:</span> master
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><code>npm install hexo-deployer-git --save</code></li>
+<li><code>hexo d</code> 这时打开 https://你的用户名.github.io/ 就可以访问你的博客啦~</li>
+<li>注意：<ul>
+<li>如果过程中 hexo 命令报错，可以尝试将 node_modules 文件夹删除，然后运行 <code>npm install</code> 重新安装所需插件</li>
+<li>如果配置或博文修改不成功，可以 <code>hexo clean</code> 清理 public 内容，再来重新生成和发布</li>
+</ul>
+</li>
+<li>发布博文<ul>
+<li><code>hexo new</code> “题目”</li>
+<li><code>hexo d -g</code> (生成并上传)</li>
+</ul>
+</li>
+<li><p>设置新的主题 <a href="https://hexo.io/themes/。(我选用的Annie)" target="_blank" rel="noopener">https://hexo.io/themes/。(我选用的Annie)</a></p>
+<p><img src="https://raw.githubusercontent.com/zlp1176/page-images/master/Annie.png" alt="Annie" title="Annie"></p>
+<ul>
+<li>选择喜欢的主题后，<code>git clone 地址</code> 克隆到 theme目录下</li>
+<li>修改 _config.yml 中的theme: landscape 改为 theme: Annie</li>
+<li>hexo g</li>
+<li>还要对相应主题进行配置，这个是我需要做的配置 <a href="https://sariay.github.io/2018/08/27/Annie%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/" target="_blank" rel="noopener">https://sariay.github.io/2018/08/27/Annie%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</a></li>
+</ul>
+</li>
+</ol>
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ul>
+<li><a href="http://lowrank.science/Hexo-Github/" target="_blank" rel="noopener">http://lowrank.science/Hexo-Github/</a></li>
+<li><a href="http://blog.haoji.me/build-blog-website-by-hexo-github.html" target="_blank" rel="noopener">http://blog.haoji.me/build-blog-website-by-hexo-github.html</a></li>
+</ul>
+	
 	</div>
 	
-	<div id="current-post-cover" data-scr="/img/8.jpg"></div>
+	<div id="current-post-cover" data-scr="/img/rain.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -353,7 +409,7 @@
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
 		
-			<a href="/2019/04/23/测试/" title="测试" rel="next">
+			<a href="/2019/04/23/hello-world/" title="Hello World" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -368,22 +424,6 @@
 
 <div class="relate-post">
 	<ul>
-		
-				<li>
-					<div>
-						<a href="/2019/04/23/测试/" title="测试">
-							测试
-						</a>
-						<p>
-							一个测试博文好不容易呀
-						</p>
-					</div>
-
-					<a href="/2019/04/23/测试/" title="测试">				
-						<img src="/img/2.jpg" class="relateImg" alt="测试">
-					</a>
-				</li>											
-		
 		
 				<li>
 					<div>
@@ -544,6 +584,13 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
+
+		
+
+		<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
 	
 		</main>
 		
